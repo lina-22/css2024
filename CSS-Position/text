@@ -1,0 +1,13 @@
+1.static
+2.relative
+3.absolute
+4.fixed
+5.sticky
+
+// Helper property:
+
+1.left
+2.right
+3.top
+4.bottom
+
