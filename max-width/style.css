@@ -1,0 +1,55 @@
+body {
+  background-color: red;
+}
+
+/*👉div {
+  background-color: blue;
+  width: 50vw;
+  height: 100vh;
+}👈*/
+/*👉
+div {
+  background-color: blue;
+  width: 1400px;
+  border: 2px solid black;
+}
+h1 {
+  width: 100%;
+  max-width: 1000px;
+  background-color: blanchedalmond;
+}
+👈*/
+/*👉
+div {
+  background-color: blue;
+  width: 500px;
+  border: 2px solid black;
+}
+h1 {
+  width: 100%;
+  min-width: 700px;
+  max-width: 1000px;
+  background-color: blanchedalmond;
+}👈*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --base-pd: 1em;
+}
+nav {
+  width: 100%;
+  background-color: rebeccapurple;
+  height: 100px;
+  padding: var(--base-pd);
+  /* padding: 1.5em; */
+}
+main {
+  background-color: brown;
+  color: white;
+  min-height: calc(100dvh - 100px);
+  /* padding: 3em; */
+  padding: calc(var(--base-pd) * 2);
+}
