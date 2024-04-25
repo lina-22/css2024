@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* -------css header add --------- */
 .mention_header {
   background: rgb(255, 255, 255);
@@ -11,7 +17,7 @@
   width: 100%;
   height: 100%;
   background-position-x: right;
-  background-image: url(/nos_offres/bg_top.png);
+  background-image: url(/offres_emploi_test/nos_offres/bg_top.png);
   background-repeat: no-repeat;
 }
 .sub_header {
@@ -106,16 +112,11 @@
 
 /* --------common offres start----------- */
 .offres {
-  padding-block: 4em;
+  border: 1px solid black;
+  padding-block: 3em;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  /* background-color: #00A3FF; */
-}
-
-.resultat_tag {
-  margin-bottom: 0;
-  color: #7c8689;
 }
 
 /* --------common offres end----------- */
@@ -128,155 +129,95 @@
   border-radius: 20px;
   max-width: 900px;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 4fr;
 }
 
-.offre .left {
-  height: 220px;
-}
-.offre .left img {
+.offre .img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  display: block;
+}
+.offre .img_container.adjust {
+  height: 120px !important;
 }
 
-.offre .center {
-  padding: 1.8em;
+.offre .description {
+  padding: 1.8em 1.2em;
 }
-
-.offre .center img {
-  /* width: 250px;
-   height: 30px; */
-  width: 145px;
-  height: 18px;
-}
-
-.offre .center h6 {
-  padding-top: 10px;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  object-fit: cover;
-}
-
-.offre .center p {
-  font-size: 0.75rem;
-  color: #7c8689;
-  padding-top: 0.875em;
-}
-
-.center section span {
-  padding: 0.3em 0.6em;
-  border-radius: 15px;
-  font-size: 0.875rem;
-}
-.center section span:nth-child(2) {
-  margin-left: 0.5em;
-}
-
-/* .consulting{
-  background-color: green;
-} */
-.tag_consulting span {
-  background-color: #e1f4ff;
-  color: #00a3ff;
-}
-
-.right {
-  padding-top: 1.8em;
-}
-
-.right div {
+.description .title_location {
   display: flex;
+  justify-content: space-between;
 }
-
-.right div img {
+.title_location section > div {
+  display: flex;
+  place-items: center;
+}
+.title_location section > div img {
   height: 15px;
-  width: 12px;
-  margin-right: 5px;
-  margin-top: 10px;
+  width: 22px;
+  padding-inline: 5px;
 }
-.right div p {
-  font-size: 0.75rem;
+.title_location h6 {
+  font-size: 1.2rem;
+}
+.location_post {
+  width: 170px;
+  text-align: right;
+}
+.location_post div {
+  display: grid;
+  justify-content: end;
+}
+.location_post div p {
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 0;
+}
+.location_post span {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.25);
 }
 
-.right > p {
+.details_list {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: #7c8689;
-}
-
-.offre__details_selector_img {
+  max-width: calc(100% - 170px);
+  color: rgba(0, 0, 0, 0.25);
   background-color: red;
+  display: none;
 }
-
-.right > button {
-  margin-top: 50px;
-  padding: 0.5em 1.5em;
-  border-radius: 40px;
-  color: white;
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.details_list ul {
+  margin-left: 25px;
+}
+.cta {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.cta .cta_btn {
+  display: flex;
+  width: 170px;
+  gap: 0.5em;
+  justify-content: end;
+}
+.btn_desc_list {
   border: none;
+  padding: 3px 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
 }
-.right > button a {
-  text-decoration: none;
-  color: white;
-}
-.consulting .right > button {
-  background-color: #36c2d4;
-}
-
-/* --------offre consulting end----------- */
-/* --------offre engineering start----------- */
-.tag_engineering span {
-  background-color: #ffe1e1;
-  color: #ff0000;
+.btn_offer {
+  border: none;
+  padding: 6px;
 }
 
-.engineering .right > button {
-  background-color: #d43636;
-}
-
-/* --------offre engineering end----------- */
-/* --------offre security start----------- */
-.tag_security span {
-  background-color: #e1e8ff;
-  color: #0029ff;
-}
-
-.security .right > button {
-  background-color: #3659d4;
-}
-
-/* --------offre security end----------- */
-/* --------offre formation start----------- */
-.tag_formation span {
-  background-color: #fff7e1;
-  color: #ff9900;
-}
-
-.formation .right > button {
-  background-color: #f6cf00;
-}
-
-.empty_offre {
-  /* background-color: #00A3FF; */
-  font-family: "Inter", sans-serif;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-.empty_offre h6 {
-  color: #000000;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.empty_offre p {
-  font-size: 12px;
-  font-weight: 400;
-  color: #707070;
-}
 /* --------offre formation end----------- */
 
 @media only screen and (max-width: 992px) {

@@ -19,7 +19,9 @@
           <section class="filter__search_location">
             <div class="search_bar">
               <label for="search_emploi">
-                <img src="/nos_offres/search-icon.png" alt="" />
+                <img
+                  src="/offres_emploi_test/nos_offres/search-icon.png"
+                  alt="" />
               </label>
               <input
                 name="search_emploi"
@@ -28,7 +30,9 @@
             </div>
             <div class="location_bar">
               <label for="search_location">
-                <img src="/nos_offres/search-location.png'" alt="" />
+                <img
+                  src="/offres_emploi_test/nos_offres/search-location.png'"
+                  alt="" />
               </label>
               <input
                 name="search_location"
@@ -45,42 +49,64 @@
           <button class="filter_button">5 offres d’emplois trouvées</button>
         </div>
       </div>
-
       <div class="offres">
         <div class="offre consulting">
-          <section class="left">
-            <img src="/nos_offres/consulting.png" alt="" />
-          </section>
-          <section class="center">
-            <!-- <img src="/nos_offres/logo_consulting.png" alt="" /> -->
-
-            <p>
-              Some key changes, such as an improved filtering system to
-              facilitate users in refining their search and finding the perfect
-              job match, have been implemented to make the page more visually
-              appealing.
-            </p>
-
-            <section class="tag_consulting">
-              <span>CDD</span>
-              <span>CDI</span>
-            </section>
+          <section class="img_container adjust">
+            <img src="/offres_emploi_test/nos_offres/consulting.png" alt="" />
           </section>
 
-          <section class="right">
-            <div>
-              <img src="/nos_offres/location.png" alt="" />
-              <p>Paris</p>
+          <section class="description">
+            <div class="title_location">
+              <h6>Developpeur Java Vue JS 2.0 et ou 3.0 / Cumulocity-IOT</h6>
+              <section class="location_post">
+                <div>
+                  <img
+                    src="/offres_emploi_test/nos_offres/location.png"
+                    alt="" />
+                  <p>Paris, France</p>
+                </div>
+                <span>Posté il y a 5 jours</span>
+              </section>
             </div>
-
-            <p>posté aujourd'hui</p>
-
-            <button class="offre__details_selector_img">
-              <img src="/nos_offres/offres_details.png" alt="" />
-            </button>
-            <button class="btn_offre">
-              <a href=""> Voir l’offre</a>
-            </button>
+            <div class="details_list">
+              <p>
+                Some key changes, such as an improved filtering system to
+                facilitate users in refining their search and finding the
+                perfect job match, have been implemented to make the page more
+                visually appealing.
+              </p>
+              <ul>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  maiores.Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Cum, maiores.
+                </li>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  maiores.Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Cum, maiores.
+                </li>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  maiores.Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Cum, maiores.
+                </li>
+              </ul>
+            </div>
+            <div class="cta">
+              <section class="offer_tag">
+                <span>CDD</span>
+                <span>Sous-traitance</span>
+              </section>
+              <section class="cta_btn">
+                <button class="btn_desc_list">
+                  <img
+                    src="/offres_emploi_test/nos_offres/offres_details.png"
+                    alt="" />
+                </button>
+                <button class="btn_offer">Voir l'offre</button>
+              </section>
+            </div>
           </section>
         </div>
 
@@ -93,5 +119,25 @@
         </div>
       </div>
     </div>
+    <script>
+      (() => {
+        let btnDescList;
+        let details_list;
+        let offre_img_container;
+        const whenReady = () => {
+          btnDescList = document.querySelector(".btn_desc_list");
+          details_list = document.querySelector(".details_list");
+          offre_img_container = document.querySelector(".img_container");
+
+          btnDescList.addEventListener("click", toggler);
+        };
+
+        const toggler = () => {
+          details_list.classList.toggle("show");
+          offre_img_container.classList.toggle("adjust");
+        };
+        document.addEventListener("DOMContentLoaded", whenReady);
+      })();
+    </script>
   </body>
 </html>
